@@ -9,7 +9,7 @@ public class App {
     		String name = "Chaitanya Hiremath";
     		
 
-    		String temp= name.
+//    		String temp= name.
     				
     		for(int i=name.length()-1;i>=0;i--)
     		{
