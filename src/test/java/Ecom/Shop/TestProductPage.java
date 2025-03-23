@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
 
 import PageObject.Page;
 
-public class ProductPage extends Base{
+public class TestProductPage extends Base{
 	@Test
 	public void product() throws InterruptedException, IOException {
 		

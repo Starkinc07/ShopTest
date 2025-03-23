@@ -38,7 +38,7 @@ public class Base implements ITestListener {
 
 	protected WebDriver driver;
 	protected WebDriverWait wait;
-	String url="https://selenium08.blogspot.com/2019/11/dropdown.html";//"https://easyupload.io/"; //"https://selenium08.blogspot.com/2020/01/click-and-hold.html";//"https://demowebshop.tricentis.com/";
+	String url="https://demowebshop.tricentis.com/";//"https://selenium08.blogspot.com/2019/11/dropdown.html";//"https://easyupload.io/"; //"https://selenium08.blogspot.com/2020/01/click-and-hold.html";//"https://demowebshop.tricentis.com/";
 	ExtentSparkReporter htmlReporter;
 	ExtentReports extent;
 	ExtentTest test;

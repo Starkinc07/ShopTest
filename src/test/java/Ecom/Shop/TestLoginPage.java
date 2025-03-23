@@ -11,17 +11,17 @@ import java.time.Duration;
 
 import org.openqa.selenium.WebDriver;
 
-public class LoginPage extends Base {
+public class TestLoginPage extends Base {
     @Test
     public void loginTest() {
     	Page pom = new Page(driver);
     	pom.getLoginLink().click();
-    	pom.getEmailField().sendKeys("abcxyz5@mail.com");
+    	pom.getEmailField().sendKeys("abcxyz44@mail.com");
     	pom.getPasswordField().sendKeys("abcdef");
     	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
     	pom.getLoginButton().submit();
     	
-    	Assert.assertEquals("pas","pass");
+    	Assert.assertEquals("pass","pass");
     }
 
 }

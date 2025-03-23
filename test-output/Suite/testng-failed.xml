@@ -3,22 +3,30 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="Ecom.Shop.RegisterPage">
+      <class name="Ecom.Shop.TestRegisterPage">
         <methods>
-          <include name="registerTest"/>
           <include name="onStart"/>
           <include name="tearDown"/>
+          <include name="registerTest"/>
           <include name="captureScreenshotOnFailure"/>
         </methods>
-      </class> <!-- Ecom.Shop.RegisterPage -->
-      <class name="Ecom.Shop.LoginPage">
+      </class> <!-- Ecom.Shop.TestRegisterPage -->
+      <class name="Ecom.Shop.TestProductPage">
+        <methods>
+          <include name="onStart"/>
+          <include name="tearDown"/>
+          <include name="product"/>
+          <include name="captureScreenshotOnFailure"/>
+        </methods>
+      </class> <!-- Ecom.Shop.TestProductPage -->
+      <class name="Ecom.Shop.TestLoginPage">
         <methods>
           <include name="onStart"/>
           <include name="tearDown"/>
           <include name="loginTest"/>
           <include name="captureScreenshotOnFailure"/>
         </methods>
-      </class> <!-- Ecom.Shop.LoginPage -->
+      </class> <!-- Ecom.Shop.TestLoginPage -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

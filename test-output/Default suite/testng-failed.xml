@@ -3,14 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Ecom.Shop.ProductPage">
+      <class name="Ecom.Shop.TestRegisterPage">
         <methods>
-          <include name="product"/>
           <include name="onStart"/>
           <include name="tearDown"/>
+          <include name="registerTest"/>
           <include name="captureScreenshotOnFailure"/>
         </methods>
-      </class> <!-- Ecom.Shop.ProductPage -->
+      </class> <!-- Ecom.Shop.TestRegisterPage -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

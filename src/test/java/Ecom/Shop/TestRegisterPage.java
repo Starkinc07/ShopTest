@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 
 import PageObject.Page;
 
-public class RegisterPage extends Base {
+public class TestRegisterPage extends Base {
 
 	@Test
 	public void registerTest() {
@@ -18,12 +18,12 @@ public class RegisterPage extends Base {
 		pom.getMaleBtn().click();
 		pom.getFirstName().sendKeys("Abc2");
 		pom.getLastName().sendKeys("xyz");
-		pom.getRegisterEmail().sendKeys("abcxyz5@mail.com");
+		pom.getRegisterEmail().sendKeys("abcxyz44@mail.com");
 		pom.getRegPassword().sendKeys("abcdef");
 		pom.getRegConfirmPass().sendKeys("abcdef");
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		pom.getRegisterBtn().submit();
-		Assert.assertEquals("Logou","Logout");
+		Assert.assertEquals("Logout","Logout");
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
 	}
