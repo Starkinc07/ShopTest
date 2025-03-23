@@ -31,6 +31,7 @@ import java.util.Date;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import Utility.*;
 
@@ -46,8 +47,16 @@ public class Base implements ITestListener {
 	
 	@BeforeClass
 	public void onStart() {
-		WebDriverManager.edgedriver().setup();	
-		driver = new EdgeDriver();
+		
+		//System.setProperty("webdriver.edge.driver", "C:\\Users\\Admin\\eclipse-workspace\\Shop\\WebDriver\\msedgedriver.exe");
+		WebDriverManager.edgedriver().setup();
+		EdgeOptions options = new EdgeOptions();
+        driver = new EdgeDriver(options);
+		
+//		WebDriverManager.edgedriver().setup();	
+//		driver = new EdgeDriver();
+		
+		
 		sc = new screenShotUtility();
 		driver.get(url);
 		
