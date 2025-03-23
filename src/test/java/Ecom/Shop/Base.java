@@ -51,9 +51,13 @@ public class Base implements ITestListener {
 		//System.setProperty("webdriver.edge.driver", "C:\\Users\\Admin\\eclipse-workspace\\Shop\\WebDriver\\msedgedriver.exe");
 		WebDriverManager.edgedriver().setup();
 		EdgeOptions options = new EdgeOptions();
-		options.addArguments("--headless=new");
+		options.addArguments("--headless=new"); // Headless mode
 		options.addArguments("--disable-gpu");
+		options.addArguments("--no-sandbox");
+		options.addArguments("--disable-extensions");
+		options.addArguments("--disable-dev-shm-usage");
 		options.addArguments("--remote-allow-origins=*");
+		
         driver = new EdgeDriver(options);
 		
 //		WebDriverManager.edgedriver().setup();	
