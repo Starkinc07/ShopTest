@@ -24,6 +24,8 @@ import java.io.IOException;
 import java.text.SimpleDateFormat;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.devtools.v112.page.Page;
 
 import java.time.Duration;
@@ -49,18 +51,9 @@ public class Base implements ITestListener {
 	public void onStart() {
 		
 		//System.setProperty("webdriver.edge.driver", "C:\\Users\\Admin\\eclipse-workspace\\Shop\\WebDriver\\msedgedriver.exe");
-		WebDriverManager.edgedriver().setup();
-		EdgeOptions options = new EdgeOptions();
-		options.addArguments("--headless=new");
-		options.addArguments("--disable-gpu");
-		options.addArguments("--no-sandbox");
-		options.addArguments("--disable-extensions");
-		options.addArguments("--disable-dev-shm-usage");
-		options.addArguments("--remote-allow-origins=*");
-		options.addArguments("--remote-debugging-port=9222"); // Debugging port
-		options.addArguments("--disable-software-rasterizer");
-		
-        driver = new EdgeDriver(options);
+		WebDriverManager.chromedriver().setup();
+		ChromeOptions options = new ChromeOptions();
+        driver = new ChromeDriver(options);
 		
 //		WebDriverManager.edgedriver().setup();	
 //		driver = new EdgeDriver();
