@@ -23,7 +23,7 @@ public class TestRegisterPage extends Base {
 		pom.getRegConfirmPass().sendKeys("abcdef");
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		pom.getRegisterBtn().submit();
-		Assert.assertEquals("Logout","Logout");
+		Assert.assertEquals("Logou","Logout");
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
 	}

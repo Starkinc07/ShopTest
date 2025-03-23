@@ -21,7 +21,7 @@ public class TestLoginPage extends Base {
     	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
     	pom.getLoginButton().submit();
     	
-    	Assert.assertEquals("pass","pass");
+    	Assert.assertEquals("pas","pass");
     }
 
 }
