@@ -51,12 +51,12 @@ public class Base implements ITestListener {
 	public void onStart() {
 		
 		//System.setProperty("webdriver.edge.driver", "C:\\Users\\Admin\\eclipse-workspace\\Shop\\WebDriver\\msedgedriver.exe");
-		WebDriverManager.chromedriver().setup();
-		ChromeOptions options = new ChromeOptions();
-        driver = new ChromeDriver(options);
-		
-//		WebDriverManager.edgedriver().setup();	
-//		driver = new EdgeDriver();
+//		WebDriverManager.chromedriver().setup();
+//		ChromeOptions options = new ChromeOptions();
+//        driver = new ChromeDriver(options);
+////		
+		WebDriverManager.edgedriver().setup();	
+		driver = new EdgeDriver();
 		
 		
 		sc = new screenShotUtility();
