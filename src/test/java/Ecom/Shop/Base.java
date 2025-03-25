@@ -49,27 +49,28 @@ public class Base implements ITestListener {
 	
 	@BeforeClass
 	public void onStart() {
-		
-		//System.setProperty("webdriver.edge.driver", "C:\\Users\\Admin\\eclipse-workspace\\Shop\\WebDriver\\msedgedriver.exe");
-//		WebDriverManager.chromedriver().setup();
+		 
+		System.setProperty("webdriver.edge.driver", "C:\\Users\\Admin\\eclipse-workspace\\Shop\\WebDriver\\msedgedriver.exe");
+		EdgeOptions options = new EdgeOptions();
+		driver = new EdgeDriver(options);
+		//WebDriverManager.chromedriver().setup();
 //		ChromeOptions options = new ChromeOptions();
 //        driver = new ChromeDriver(options);
 //////		
-		WebDriverManager.edgedriver().setup();	
+//		WebDriverManager.edgedriver().setup();	
 //		driver = new EdgeDriver();
 	
-//        WebDriverManager.chromedriver().setup();
-        
+    
         // Set up EdgeOptions for headless mode
-        EdgeOptions options = new EdgeOptions();
-        options.addArguments("--headless=new");
-        options.addArguments("--disable-gpu");
-        options.addArguments("--remote-allow-origins=*");
-        options.addArguments("--no-sandbox");  // If running in a restricted environment
-        options.addArguments("--window-size=1920,1080");
-        options.addArguments("--start-maximized");
-        driver = new EdgeDriver(options);
-    	System.out.println("Edge version: " + WebDriverManager.edgedriver().getDownloadedDriverVersion());
+//        EdgeOptions options = new EdgeOptions();
+//        options.addArguments("--headless=new");
+//        options.addArguments("--disable-gpu");
+//        options.addArguments("--remote-allow-origins=*");
+//        options.addArguments("--no-sandbox");  // If running in a restricted environment
+//        options.addArguments("--window-size=1920,1080");
+//        options.addArguments("--start-maximized");
+//        driver = new EdgeDriver(options);
+//    	System.out.println("Edge version: " + WebDriverManager.edgedriver().getDownloadedDriverVersion());
 
 		sc = new screenShotUtility();
 		driver.get(url);
