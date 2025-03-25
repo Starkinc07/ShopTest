@@ -52,6 +52,12 @@ public class Base implements ITestListener {
 		 
 		System.setProperty("webdriver.edge.driver", "C:\\Users\\Admin\\eclipse-workspace\\Shop\\WebDriver\\msedgedriver.exe");
 		EdgeOptions options = new EdgeOptions();
+        options.addArguments("--headless=new");
+        options.addArguments("--disable-gpu");
+        options.addArguments("--remote-allow-origins=*");
+        options.addArguments("--no-sandbox");  // If running in a restricted environment
+        options.addArguments("--window-size=1920,1080");
+        options.addArguments("--start-maximized");
 		driver = new EdgeDriver(options);
 		//WebDriverManager.chromedriver().setup();
 //		ChromeOptions options = new ChromeOptions();
@@ -63,12 +69,7 @@ public class Base implements ITestListener {
     
         // Set up EdgeOptions for headless mode
 //        EdgeOptions options = new EdgeOptions();
-//        options.addArguments("--headless=new");
-//        options.addArguments("--disable-gpu");
-//        options.addArguments("--remote-allow-origins=*");
-//        options.addArguments("--no-sandbox");  // If running in a restricted environment
-//        options.addArguments("--window-size=1920,1080");
-//        options.addArguments("--start-maximized");
+
 //        driver = new EdgeDriver(options);
 //    	System.out.println("Edge version: " + WebDriverManager.edgedriver().getDownloadedDriverVersion());
 
