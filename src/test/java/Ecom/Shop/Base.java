@@ -66,7 +66,7 @@ public class Base implements ITestListener {
         options.addArguments("--disable-gpu");
         options.addArguments("--remote-allow-origins=*");
         options.addArguments("--no-sandbox");  // If running in a restricted environment
-
+        WebDriver driver = new EdgeDriver(options);
 		
 		sc = new screenShotUtility();
 		driver.get(url);
