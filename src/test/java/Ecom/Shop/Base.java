@@ -58,15 +58,15 @@ public class Base implements ITestListener {
 //		WebDriverManager.edgedriver().setup();	
 //		driver = new EdgeDriver();
 		
-        WebDriverManager.edgedriver().setup();
+        WebDriverManager.chromedriver().setup();
         
         // Set up EdgeOptions for headless mode
-        EdgeOptions options = new EdgeOptions();
+        ChromeOptions options = new ChromeOptions();
         options.addArguments("--headless");
         options.addArguments("--disable-gpu");
         options.addArguments("--remote-allow-origins=*");
         options.addArguments("--no-sandbox");  // If running in a restricted environment
-        WebDriver driver = new EdgeDriver(options);
+        WebDriver driver = new ChromeDriver(options);
 		
 		sc = new screenShotUtility();
 		driver.get(url);
