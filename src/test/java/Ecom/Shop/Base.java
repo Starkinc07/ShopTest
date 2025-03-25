@@ -66,6 +66,8 @@ public class Base implements ITestListener {
         options.addArguments("--disable-gpu");
         options.addArguments("--remote-allow-origins=*");
         options.addArguments("--no-sandbox");  // If running in a restricted environment
+        options.addArguments("--window-size=1920,1080");
+        options.addArguments("--start-maximized");
         driver = new EdgeDriver(options);
     	System.out.println("Edge version: " + WebDriverManager.edgedriver().getDownloadedDriverVersion());
 
