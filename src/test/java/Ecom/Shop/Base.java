@@ -62,7 +62,7 @@ public class Base implements ITestListener {
         
         // Set up EdgeOptions for headless mode
         EdgeOptions options = new EdgeOptions();
-        options.addArguments("--headless");
+        options.addArguments("--headless=new");
         options.addArguments("--disable-gpu");
         options.addArguments("--remote-allow-origins=*");
         options.addArguments("--no-sandbox");  // If running in a restricted environment
